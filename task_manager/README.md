@@ -26,3 +26,24 @@ RUN
   },
 
 # optional if you didnt install particular pkgs and onky inlisted them in pkg.json by creating npm init -y
+
+## approch for the project
+
+at start i just created a simple server and a simple route for which base url is /hello and send response 'Task Manger App' using get method
+
+and the server is listening on port 3000 which prints `Server is listening on port ${PORT} `
+
+- after this i decided what routes i should make in which was 
+
+=> get all my new task which is get req
+
+=> i can crete new task which is post request
+
+=> i can also delete one => delete method
+
+=> for edit we open a new page and get info about a specfic route so theres a get req that just get me info about one single task also and also we can edit the task from checklist so theres a route fir that also 
+
+Q -> now i got a quest, if i use the convention for apis why get and post same apis and get patch and delte diffrent api why there is no single task or something alsong those lines 
+
+A -> its a convention
+
