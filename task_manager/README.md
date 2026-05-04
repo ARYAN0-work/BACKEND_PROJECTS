@@ -59,4 +59,6 @@ AND THEN WE MOVE FURTHER
 
 - first setting up the route for / => all items through get req and then exporting it 
 
+- now setting up the middleware for the above route and 
 
+-now we are sending json from our application and since i want to access that data in my routes is to get middleware that is built into express json [make it above the routes]
