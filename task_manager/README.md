@@ -47,3 +47,16 @@ Q -> now i got a quest, if i use the convention for apis why get and post same a
 
 A -> its a convention
 
+- the workflow gonna be like 
+
+basic routes[with some simple response ] -> postman setup -> setting up database 
+
+- NOW THE ACTUAL START 
+
+first lets setup the router and controller for the get route -> hi here all the items or something along those lines and then
+
+AND THEN WE MOVE FURTHER 
+
+- first setting up the route for / => all items through get req and then exporting it 
+
+
