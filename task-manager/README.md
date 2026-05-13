@@ -97,3 +97,22 @@ actually i forget its router addition api/v1/tasks is just base url in app if  y
 
 after creating all of them the prob -> we can only test single task get all task bcz thats default method the browser performs -> POSTMAN
 
+## Now testing all the apis on INSOMONIA
+
+- also remember that for post request change  res.send('create task') to res.json(req.body)
+now you can see more betterly that your middleware works or not and it would be faster to send whatever i get from the client on server
+
+- we didnt setup our database so theres no real id but we can test it with some giberish also its a get => :id => its our param her also change gettask into res.json 
+
+- now do the testing for other routes
+
+# now use of REST-API => its a pattern to reprent apis
+# and as for database => go for monogodb atlas
+
+- in database access who can access our project
+- in network acesss => from where we are setting up our database
+
+- during deployment setup the ip adress
+- connection string for connecting data string which we are gonna setup in enviourment variable[db]
+
+- during production our once we deploy project on horoku you have to use anwhere option in ip adress bcz if you dont you will have error in app during connecting mongodb
