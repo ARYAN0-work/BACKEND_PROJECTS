@@ -116,3 +116,7 @@ now you can see more betterly that your middleware works or not and it would be 
 - connection string for connecting data string which we are gonna setup in enviourment variable[db]
 
 - during production our once we deploy project on horoku you have to use anwhere option in ip adress bcz if you dont you will have error in app during connecting mongodb
+
+# now for connecting database to our project -> use mongoose 
+
+- if you enter the wrong waring you will get an atlas error warning

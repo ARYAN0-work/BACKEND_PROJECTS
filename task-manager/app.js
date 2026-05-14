@@ -1,4 +1,4 @@
-require('./db/connect')
+require('./db/connect')// you will get deprection warning in old version => id
 const express = require('express')
 const app = express()
 const tasks = require('./routes/task')
