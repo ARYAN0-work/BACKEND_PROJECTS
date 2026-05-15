@@ -120,3 +120,13 @@ now you can see more betterly that your middleware works or not and it would be 
 # now for connecting database to our project -> use mongoose 
 
 - if you enter the wrong waring you will get an atlas error warning
+
+# the prob with mongoose our basic setup 
+
+- that our server and datbase connection are not in sync  ; ex:- cosole.log server listening on then we are connecting to the database but what is use pf server if databaase is missing 
+
+- so why dont we connect to the database and then we spin up the server in order to do that refracte code and i am not gonna invoke  mongoose connect in connect.js i will refracte the code and set it up as a fn and invoke it in appp.js and use env variable for that 
+
+# why we put the code in .env 
+
+- then anyone can manipulate our database
