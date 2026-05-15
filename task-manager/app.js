@@ -1,21 +1,32 @@
-require('./db/connect')// you will get deprection warning in old version => id
 const express = require('express')
 const app = express()
 const tasks = require('./routes/task')
+const connectDB = require('./db/connect')
+require('dotenv').config()// in order to get that secrets just invoke that pkg
 
 //middleware
-app.use(express.json())// if we dont use this it wont be in the req.body 
-// here you forget ()
+app.use(express.json())
 
 // routes 
 app.get('/hello',(req,res)=>{
     res.send('Task Manger App')
 })
 
-app.use('/api/v1/tasks',tasks)// here you forget /api
+app.use('/api/v1/tasks',tasks)
 
 const PORT = 3000
 
-app.listen(PORT,()=>
-    {console.log(`Server is listening on port ${PORT} `)
-});
+const start = async()=>{ // bcz connect.js returns a promise
+    try {
+        await connectDB(process.env.MONGO_URI)//pass the string coming from .env file => we will spin up the server only if server connection is ok
+        app.listen(PORT, () => {
+        console.log(`Server is listening on port ${PORT}...`)
+})
+
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+
+start()
