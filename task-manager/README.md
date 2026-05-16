@@ -130,3 +130,21 @@ now you can see more betterly that your middleware works or not and it would be 
 # why we put the code in .env 
 
 - then anyone can manipulate our database
+
+# now setting up our future docs and assign them to the collection using schema and model fom mongoose
+
+- now whats schema => when we set up our docon atlas theres no structure but thats what i want where my tasks only want the name which is going to be a string and only valuable and needed things 
+
+- now in schema we are gonna set up our collection and the syntax: key value pairs and data type its bair min
+
+# after setting up schema set up model[set of collection]
+
+- also imp point when we push this into our databse it will added to that specfic collection and in mongoose model is a wrapper for the schema so if schema defines the structure for doc like type validation a mongoose model provide interface to the database and we wiil use model to for crud [full-theroy-on-mongoose-docs]
+
+- after creating new doc you will have collection on atlas
+
+- now set up the four controller in similar fashion
+
+# the prop we specified in our schema will be pass on to the database everything else is gonna be ignored => on postman add proper results gonna be the same => imp point schema's proper only passsed
+
+# now validation => we can pass empty values,object  not the best setup

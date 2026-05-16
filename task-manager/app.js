@@ -8,7 +8,7 @@ require('dotenv').config()// in order to get that secrets just invoke that pkg
 app.use(express.json())
 
 // routes 
-app.get('/hello',(req,res)=>{
+app.get('/hello',(req,res)=>{ c
     res.send('Task Manger App')
 })
 
@@ -30,3 +30,5 @@ const start = async()=>{ // bcz connect.js returns a promise
 }
 
 start()
+
+// now setting up our future docs and assign them to the collection
