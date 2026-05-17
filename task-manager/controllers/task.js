@@ -41,14 +41,24 @@ const getTask = async (req,res)=>{
   }
 }
 
-const deletetTask = (req,res)=>{
-    res.send('delete task')
-}
 
 const updateTask = (req,res)=>{
     res.send('update task')
 }
 
+// not that damn useful response bcz while delting a tak you are not really looking at your data 
+const deletetTask = async (req,res)=>{ 
+    try{
+        const { id: taskID } = req.params
+        const task = await Task.findOneAndDelete({_id:taskID}) 
+        if (!task) {
+        return res.status(404).json({msg:`No task with id : ${taskID}`})
+    }
+    res.status(200).json({task})
+   }catch(error){
+    res.status(500).json({msg: error})
+   }
+}
 module.exports = {
     getAllTask,createTask,getTask,deletetTask,updateTask
 }

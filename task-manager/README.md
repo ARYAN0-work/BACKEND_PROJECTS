@@ -162,7 +162,7 @@ now you can see more betterly that your middleware works or not and it would be 
 
 - now we know how to read task  now for get req: the idea =>genral respons: if id that we pass in doesnt match any of the tasks that we currntly have in order to get up and running we'll navigate back to the docs to the mongoose docs and in this case were looking for .findOne()
 
-- in this we have two error 1st in try catch block we have genric one => two response 404 and 500 => if we change the last digit simply err runs but if we add soemthing cast error this error is send by mongoose if it doesnt match the syntax error 
+- in this we have two error 1st in try catch block we have genric one => two response 404 and 500 => if we change the last digit simply err runs but if we add/remove soemthing cast error this error is send by mongoose if it doesnt match the syntax error 
 
 - now for delete task 
 
