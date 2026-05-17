@@ -148,3 +148,15 @@ now you can see more betterly that your middleware works or not and it would be 
 # the prop we specified in our schema will be pass on to the database everything else is gonna be ignored => on postman add proper results gonna be the same => imp point schema's proper only passsed
 
 # now validation => we can pass empty values,object  not the best setup
+
+# so what we did is 
+
+- modals/task.js => define what task looks like how mongo store it
+- in short we created a model ; Task model = manager of task collection can do CRUD operations 
+- then in task.js we handle that and create docs for mongodb
+- controller DOES NOT directly talk to MongoDB, It talks to MODEL,The MODEL talks to MongoDB.
+
+# above we discussed validation, need for try-catch and we have a synchronus approch 
+
+- now we know how to create a task we know that how we have a model in the model we pass in schema and in orderto get the instance we go with thc name of model and method is dot create now for the rest of all the operation we are gonna use crud operation which return mongoose query object 
+

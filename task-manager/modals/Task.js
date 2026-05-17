@@ -1,3 +1,7 @@
+//You are NOT defining the response structure there.You are defining the DATABASE DOCUMENT STRUCTURE => in short How task data should be stored inside MongoDB
+
+//Mongoose also converts this automatically into MongoDB collection name:Task  →  tasks (lowercase + plural So MongoDB collection becomes:tasks
+
 const mongoose = require('mongoose')
 
 const TaskSchema = new mongoose.Schema({
@@ -15,7 +19,9 @@ const TaskSchema = new mongoose.Schema({
     },
 })
 
-module.exports = mongoose.model('Task',TaskSchema)
+module.exports = mongoose.model('Task',TaskSchema)//mongoose.model(modelName, schema)
+
+//model() is a Mongoose method => model() is a Mongoose method.
 
 // now we send empty string and sending request continuous error bcz 
 // now whats validation error ->
