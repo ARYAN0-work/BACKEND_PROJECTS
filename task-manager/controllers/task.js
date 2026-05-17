@@ -1,4 +1,6 @@
 const Task = require('../modals/Task')
+
+// route for reading an task
 const getAllTask =async (req,res)=>{
     //save thsi and then on postman fill a valid name then on get send you will get all tasks and this the 2nd route 
     try{ 
@@ -13,6 +15,7 @@ const getAllTask =async (req,res)=>{
 
 // here we use the static fn and we pass in the empty object which just get us all docs in the collection and in our case those are tasks => setting up controller for create task and get all tasks and now for get task 
 
+// route for creating an item 
 const createTask =async (req,res)=>{ // we are using await on task.create thats why async
     try{
       const task = await Task.create(req.body)
@@ -23,8 +26,19 @@ const createTask =async (req,res)=>{ // we are using await on task.create thats 
     //res.status(201).res.json({task}) bug => now we will have created a new doc with id 
 }
 
-const getTask = (req,res)=>{
-    res.json({id:req.params.id})
+// route for single item
+const getTask = async (req,res)=>{
+  try {
+    const {id:taskID}  = req.params // const taskID = req.params.id
+    const task = await Task.findOne({_id:taskID});// is the REAL database query.It means,Hey MongoDB-find ONE document whose _id equals taskID & Task is the model here not schema 
+  if (!task) {
+    return res.status(404).json({msg:`No task with id${taskID}`})
+  }
+
+   res.status(200).json({task})
+  } catch (error) {
+    res.status(500).json({msg:error})
+  }
 }
 
 const deletetTask = (req,res)=>{
