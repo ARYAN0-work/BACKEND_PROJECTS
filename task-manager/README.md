@@ -158,5 +158,7 @@ now you can see more betterly that your middleware works or not and it would be 
 
 # above we discussed validation, need for try-catch and we have a synchronus approch 
 
-- now we know how to create a task we know that how we have a model in the model we pass in schema and in orderto get the instance we go with thc name of model and method is dot create now for the rest of all the operation we are gonna use crud operation which return mongoose query object 
+- now we know how to create a task .create() we know that how we have a model in the model we pass in schema and in orderto get the instance we go with thc name of model and method is dot create now for the rest of all the operation we are gonna use crud operation which return mongoose query object => for read .find()
+
+- now we know how to read task  now for get req: the idea =>genral respons: if id that we pass in doesnt match any of the tasks that we currntly have in order to get up and running we'll navigate back to the docs to the mongoose docs and in this case were looking for .findOne()
 
