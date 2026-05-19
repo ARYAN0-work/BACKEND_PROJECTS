@@ -164,5 +164,4 @@ now you can see more betterly that your middleware works or not and it would be 
 
 - in this we have two error 1st in try catch block we have genric one => two response 404 and 500 => if we change the last digit simply err runs but if we add/remove soemthing cast error this error is send by mongoose if it doesnt match the syntax error 
 
-- now for delete task 
-
+- now for delete task => then update task which needs a bit more of a functionalty bcz we are updating something and we are gonna need some validators bcz we passing some options => params one and body one 
