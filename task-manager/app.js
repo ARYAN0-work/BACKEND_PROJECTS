@@ -5,12 +5,11 @@ const connectDB = require('./db/connect')
 require('dotenv').config()// in order to get that secrets just invoke that pkg
 
 //middleware
+app.use(express.static('./public'))
 app.use(express.json())
 
 // routes 
-app.get('/hello',(req,res)=>{ c
-    res.send('Task Manger App')
-})
+
 
 app.use('/api/v1/tasks',tasks)
 
