@@ -69,7 +69,7 @@ const updateTask = async (req,res)=>{
    }
    //  we are gonna get 200 on postman and we are getting this bcz we are not passing options and for options => we wanna get the new one back , we are not running the validators 
    // in short we are getting back the old value and in order to check the new one we just need to run get all tasks bcz we are not passing  options object and for that in oirder to go the controller parameter adjacent req.body which is gonna be our thurd 
-    res.status(200).json({id:taskID,data:req.body})
+    res.status(200).json({task})
   } catch (error) {
      res.status(500).json({msg: error})
   }
