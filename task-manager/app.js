@@ -4,6 +4,7 @@ const tasks = require('./routes/task')
 const connectDB = require('./db/connect')
 require('dotenv').config()// in order to get that secrets just invoke that pkg
 const notFound = require('./middleware/not-found')
+const errorHandlerMiddleware = require('./middleware/not-found')
 
 //middleware
 app.use(express.static('./public'))
@@ -14,13 +15,13 @@ app.use('/api/v1/tasks',tasks)
 
 app.use(notFound)
 
-// here the loction is imp 
+app.use(errorHandlerMiddleware)
 
 const PORT = 3000
 
-const start = async()=>{ // bcz connect.js returns a promise
+const start = async()=>{ 
     try {
-        await connectDB(process.env.MONGO_URI)//pass the string coming from .env file => we will spin up the server only if server connection is ok
+        await connectDB(process.env.MONGO_URI)
         app.listen(PORT, () => {
         console.log(`Server is listening on port ${PORT}...`)
 })
@@ -32,5 +33,3 @@ const start = async()=>{ // bcz connect.js returns a promise
 }
 
 start()
-
-// now setting up our future docs and assign them to the collection

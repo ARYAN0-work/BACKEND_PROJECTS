@@ -189,3 +189,7 @@ so the diffrenece wehre when we work with put the expextation is that we'll repl
 
 - now do this for all our controller and check this insomnia also when i try to provide empty string to name we are gonna get error
 
+- now making something to catch the error=> the above error is gonna come solve by this soln :  the error is coming from default built-in error handler that's point 1 and 2nd thats why in async wrapper we set up this next(error) so we pass it to next middleware but in our case of course we havn't set up that handler yet so therfore it was just eventually passed diwn to the built-in one 
+
+- so now we are gonna write another set of middleware however in this case the middleware will handle error => 4 argument  : after manipulating the server you can see that now the bug is gone 
+
