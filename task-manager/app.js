@@ -17,7 +17,7 @@ app.use(notFound)
 
 app.use(errorHandlerMiddleware)
 
-const PORT = 3000
+const PORT =  3000
 
 const start = async()=>{ 
     try {
