@@ -165,3 +165,16 @@ now you can see more betterly that your middleware works or not and it would be 
 - in this we have two error 1st in try catch block we have genric one => two response 404 and 500 => if we change the last digit simply err runs but if we add/remove soemthing cast error this error is send by mongoose if it doesnt match the syntax error 
 
 - now for delete task => then update task which needs a bit more of a functionalty bcz we are updating something and we are gonna need some validators bcz we passing some options => params one and body one 
+
+# now the basic functionalty is completed only the finishing remains
+
+- q-> why we used patch here and put in tutorial
+- patch[partial-update] and put[replacing-existing-resource]
+
+`````````` whats actually happend 
+
+for patch see on postman in update task if id is correct then only on properties that i'll pass in will be updated so in this case if i go with shake and bake no.2 i''ll actually remvie complted only the property that is passed in will be updated so if i send ;see i get the task and i cqan clearly see that completed is there even though i didnt pass it why bcz thats how our fuctionalty is set up in controller so if i pass complted and i'll set it equal to false of course it will be updated as well so if i go completed and set it as false yes in this case i am gonna get new result now for the diffrence with put we manipulate the server [controller-route] now on insomnia test the manipulated server api 
+you see if  i send only the name my expectation is that rest of the properties which of course in our case is just completed will be removed from that item so we will replace that item and how is that going to look like in our controller well here going to be exactly same but by defalut mongoose doesnt do that by default so mongoose is going to be like okay so you want to get item you want to update it awesome just get me the properties you want to update and rest of them will stay the same and if actually want to remvies those prop the ones that i am not pasing in with my request i need to add another option here and the option name is overwrite and set equal to true noiw the controller works 
+so the diffrenece wehre when we work with put the expextation is that we'll replace the item so we'll just pass in the properties that we want to set up in item and them rest of them will be remved but with patch we're just updating the properties that we're passing in justr rember that in real life put have same fuctionalty as patch in our case we are gonna use patch 
+```````````
+
