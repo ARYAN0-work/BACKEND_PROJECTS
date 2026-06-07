@@ -187,3 +187,5 @@ so the diffrenece wehre when we work with put the expextation is that we'll repl
 
 - why: bcz we have async operations yes its very useful to use this try catch blocks but it becomes reduntant for this we are gonna create a middleware fn which contion controller and have functinalty where we don't have to repeat ourselves and before we continue , there are some npm pkg that do for us : in upcoming project but we are gonna take the idea first rather then seeing blindly what pkg is doing so the base logic in ./middleware/async.js
 
+- now do this for all our controller and check this insomnia also when i try to provide empty string to name we are gonna get error
+
