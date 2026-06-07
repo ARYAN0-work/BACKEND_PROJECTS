@@ -182,3 +182,8 @@ so the diffrenece wehre when we work with put the expextation is that we'll repl
 ## now for route not working 
 
 - if i go on site and do api/v1/tasks i will get all task but if i do api/v1/hello i can't get api .... in network tab of course we get 404 error but essentially this is going to be the default one and instead i want to set up the custiom by manipulating app => also server defauolt 404
+
+# next working on async wrappers for all our controller
+
+- why: bcz we have async operations yes its very useful to use this try catch blocks but it becomes reduntant for this we are gonna create a middleware fn which contion controller and have functinalty where we don't have to repeat ourselves and before we continue , there are some npm pkg that do for us : in upcoming project but we are gonna take the idea first rather then seeing blindly what pkg is doing so the base logic in ./middleware/async.js
+
