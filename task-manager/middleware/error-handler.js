@@ -1,6 +1,6 @@
 const errorHanleMidlleware =(err,req,res,next) =>{
+console.log(err)
     return res.status(500).json(
-        //{msg:err}or
         {msg:`something went wrong `}
     )
 }

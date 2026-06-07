@@ -193,3 +193,4 @@ so the diffrenece wehre when we work with put the expextation is that we'll repl
 
 - so now we are gonna write another set of middleware however in this case the middleware will handle error => 4 argument  : after manipulating the server you can see that now the bug is gone 
 
+- now i want to setup a custom error class which extends from genral js error class and that way we can handle all of our 404 response in our newly created error handler as well   
