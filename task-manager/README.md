@@ -178,3 +178,7 @@ you see if  i send only the name my expectation is that rest of the properties w
 so the diffrenece wehre when we work with put the expextation is that we'll replace the item so we'll just pass in the properties that we want to set up in item and them rest of them will be remved but with patch we're just updating the properties that we're passing in justr rember that in real life put have same fuctionalty as patch in our case we are gonna use patch 
 
 ## now before refractoring code we focused on our routes [other options]
+
+## now for route not working 
+
+- if i go on site and do api/v1/tasks i will get all task but if i do api/v1/hello i can't get api .... in network tab of course we get 404 error but essentially this is going to be the default one and instead i want to set up the custiom by manipulating app => also server defauolt 404

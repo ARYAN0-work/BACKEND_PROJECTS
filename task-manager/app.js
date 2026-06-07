@@ -3,15 +3,18 @@ const app = express()
 const tasks = require('./routes/task')
 const connectDB = require('./db/connect')
 require('dotenv').config()// in order to get that secrets just invoke that pkg
+const notFound = require('./middleware/not-found')
 
 //middleware
 app.use(express.static('./public'))
 app.use(express.json())
 
 // routes 
-
-
 app.use('/api/v1/tasks',tasks)
+
+app.use(notFound)
+
+// here the loction is imp 
 
 const PORT = 3000
 
