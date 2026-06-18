@@ -1,4 +1,7 @@
 require('dotenv').config()
+//require('express-async-error') he used that 
+require('express-async-wrapper')
+// now 
 
 const express = require('express')
 const app = express()

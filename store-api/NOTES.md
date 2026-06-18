@@ -10,3 +10,12 @@
 - now test these on insomnia my making new project
 
 - check base URL then test for products and static
+
+- now before moving to mongoose see we have no async-Wrapper and remember we needed to use something either we set up try catch everywhere or setup async wrapper but when we are setting up i also have express-async-error and essentialy we have to go back to app.js then we have to just import it 
+
+# by the way command for async-wrapper : npm install express-async-wrapper
+
+
+### explore this 
+
+- diffrence between these two commands => npm install express-async-errors  and npm install express-async-wrapper
