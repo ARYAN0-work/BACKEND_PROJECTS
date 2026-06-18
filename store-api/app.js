@@ -5,6 +5,7 @@ const app = express()
 
 
 const connectDB = require('./db/connect')
+const productRouter = require('./routes/products')
 
 
 const notFoundMiddleware = require('./middleware/not-found')
@@ -17,6 +18,9 @@ app.get('/',(req,res)=>{
     res.send('<h1>Store API</h1><a href ="/api/v1/products">products route</a>')
 }) 
 
+app.use('/api/v1/products',productRouter)
+
+
 app.use(notFoundMiddleware)
 app.use(errorMiddleware)
 
@@ -25,9 +29,6 @@ const port = process.env.PORT || 3000
 
 const start = async()=>{
     try {
-        //connectDB
-
-        // this fn returns a promise thats why we start with async 
         await connectDB(process.env.MONGO_URI)
         app.listen(port,console.log(`Server is listening port ${port}...`))
     } catch (error) {
@@ -37,3 +38,10 @@ const start = async()=>{
 }
 
 start()
+
+// now we are gonna move to routes -> 2 rotes 
+
+/*
+1st one -> manual testing ; setting up the router
+
+*/
