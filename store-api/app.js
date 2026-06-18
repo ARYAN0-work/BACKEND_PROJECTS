@@ -37,11 +37,4 @@ const start = async()=>{
     }
 }
 
-start()
-
-// now we are gonna move to routes -> 2 rotes 
-
-/*
-1st one -> manual testing ; setting up the router
-
-*/
+start()    
