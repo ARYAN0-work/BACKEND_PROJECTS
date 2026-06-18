@@ -19,3 +19,5 @@
 ### explore this 
 
 - diffrence between these two commands => npm install express-async-errors  and npm install express-async-wrapper
+
+- now stting up the modals ; in order to show these propertiees i am gonna setup schema
