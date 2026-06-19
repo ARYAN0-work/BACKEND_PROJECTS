@@ -24,3 +24,5 @@
 
 - now setting up our database ; 2 choice: you either can setup post route and then just manually add them or a better approch is just to attomate this and essentially have kind of list and pass it on to your database now if you notice product.json we have to only setup populate.js
 here we will dynamically add all values to our database
+
+- now after connecting to DB : things i want to do is remove all the products i currently have then i want to create and just pass the json product     
