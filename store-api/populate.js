@@ -1,4 +1,4 @@
-require('dotenv').config  // bringing dotenv 
+require('dotenv').config()  // bringing dotenv 
 
 // we need to have another connection 
 
