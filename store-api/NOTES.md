@@ -28,3 +28,5 @@ here we will dynamically add all values to our database
 - now after connecting to DB : things i want to do is remove all the products i currently have then i want to create and just pass the json product     
 
 - now if we want to search for the product in mongoose we need to go with find method => find (empty object) +> you will get all the objects 
+
+- now implementing the all product and start implementing the get all products where setup is more complex then just hard coding => mainly key value querie parameter[3:55 to 4:00] revise
