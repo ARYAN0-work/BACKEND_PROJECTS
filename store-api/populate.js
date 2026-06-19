@@ -9,11 +9,14 @@ const jsonProducts = require('./products.json')
 const start = async()=>{
     try {
         await connectDB(process.env.MONGO_URI)
-        await Product.deleteMany()// if theres any data left we will just delete it and start from scratch 
-        await Product.create(jsonProducts) // you will have store api in atlas
+        await Product.deleteMany()
+        await Product.create(jsonProducts)
         console.log('Success!!!');
+
+        process.exit(0)// now start filtering before that using method : if we succuses weith pouplate s we will terminate the whole process we do't need this file to be running 
     } catch (error) {
         console.log(error);
+        process.exit(1)// now start filtering before that using method : if we succuses weith pouplate s we will terminate the whole process we do't need this file to be running 
     }
 }
 
