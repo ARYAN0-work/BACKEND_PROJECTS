@@ -21,3 +21,5 @@
 - diffrence between these two commands => npm install express-async-errors  and npm install express-async-wrapper
 
 - now stting up the modals ; in order to show these propertiees i am gonna setup schema
+
+- now setting up our database ; 2 choice: you either can setup post route and then just manually add them or a better approch is just to attomate this and essentially have kind of list and pass it on to your database now if you notice product.json we have to only setup populate.js
