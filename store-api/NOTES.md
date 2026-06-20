@@ -30,3 +30,7 @@ here we will dynamically add all values to our database
 - now if we want to search for the product in mongoose we need to go with find method => find (empty object) +> you will get all the objects 
 
 - now implementing the all product and start implementing the get all products where setup is more complex then just hard coding => mainly key value querie parameter[3:55 to 4:00] revise
+
+- now setting up the logic 
+
+- now what if in query string params we're going to pass some kind of value that doesn't match any values that we have currently in the model so remeber we're setting up the model we have name price featured and blah blah but happens if i sent a request a page 
