@@ -48,3 +48,5 @@ for now based on a date when they are created and of course since we added them 
 - now for skip and limit  {{URL}}/products?limit=4 => for how many project we gonna have , i have 23 so if i do 30 we will have 23
 
 - FOR LIMIT SEE AGAIN 
+
+- now the last thing left numeric fn {{URL}}/products?numericFilters=price>30&sort=price  with the help of query operator 
