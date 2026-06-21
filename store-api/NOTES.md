@@ -42,3 +42,5 @@ here we will dynamically add all values to our database
 for now based on a date when they are created and of course since we added them dynamically that means the entire batch  {{URL}}/products?sort=name now product are gonna be in alphabetical order now for sort them in z to a use -name and now if if i want to look at my rpices also {{URL}}/products?sort=name,price same for -price 
 
 - in short lets start the static approch 
+
+- now how to see certain fields {{URL}}/products?fields = name,price 
