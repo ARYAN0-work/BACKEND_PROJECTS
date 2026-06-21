@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const tasks = require('./routes/task')
 const connectDB = require('./db/connect')
-require('dotenv').config()// in order to get that secrets just invoke that pkg
+require('dotenv').config()
 const notFound = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/not-found')
 

@@ -44,3 +44,7 @@ for now based on a date when they are created and of course since we added them 
 - in short lets start the static approch 
 
 - now how to see certain fields {{URL}}/products?fields = name,price 
+
+- now for skip and limit  {{URL}}/products?limit=4 => for how many project we gonna have , i have 23 so if i do 30 we will have 23
+
+- FOR LIMIT SEE AGAIN 
