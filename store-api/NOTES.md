@@ -36,3 +36,9 @@ here we will dynamically add all values to our database
 - now what if in query string params we're going to pass some kind of value that doesn't match any values that we have currently in the model so remeber we're setting up the model we have name price featured and blah blah but happens if i sent a request a page 
 
 - now using queryOperators -> numeric filters with name 
+
+- now how to sort our data first in final then genral mongoose setup then in our setup also sorting doesnt affect deosnt affect  the amount of items we're returning just the order in which they are returning 
+
+for now based on a date when they are created and of course since we added them dynamically that means the entire batch  {{URL}}/products?sort=name now product are gonna be in alphabetical order now for sort them in z to a use -name and now if if i want to look at my rpices also {{URL}}/products?sort=name,price same for -price 
+
+- in short lets start the static approch 

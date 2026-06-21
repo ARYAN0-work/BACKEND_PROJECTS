@@ -1,16 +1,12 @@
 const Product = require('../models/product')
 
 const getAllProductsStatic = async(req,res)=>{
-    // we are looking for a name property but instead of looking for entire name instead we go with rejects where essentialy we're looking for the pattern => in insomnia we get all the items whoch have at a 
-    const search = 'a'
-    const products = await Product.find({name:{$regex:search,$options:'i'},
-    })
+    const products = await Product.find({}).sort('name')//and if we want to add price dont add , just add price .sort('name price')//same with .sort('-name')// now our response is gonna be in alphabetical order
     res.status(200).json({ products,nbHits:products.length })
 }
 
 const getAllProducts = async(req,res)=>{
-    const products = await Product.find(req.query)
-   const { featured,company,name } = req.query
+   const { featured,company,name,sort } = req.query
    const queryObject = {}
 
    if (featured) {
@@ -23,7 +19,15 @@ const getAllProducts = async(req,res)=>{
     queryObject.name = {$regex:name,$options:'i'}
    }
    console.log(queryObject)
-
+    let result = Product.find(queryObject) //in order to sort we need to chain it see why its in let
+    // if the user didnt pass the sort
+    if(sort){
+        const sortList = sort.split(',').join(' ');
+        result = result.sort(sortList) // for splitting the sort[its a long string]
+    } else{
+        result = result.sort('createAt')
+    }
+    const products = await result
     res.status(200).json({ products,nbHits:products.length })// now we setup the logic 
 }
 
