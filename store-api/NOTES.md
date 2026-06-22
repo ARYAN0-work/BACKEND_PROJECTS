@@ -50,3 +50,5 @@ for now based on a date when they are created and of course since we added them 
 - FOR LIMIT SEE AGAIN 
 
 - now the last thing left numeric fn {{URL}}/products?numericFilters=price>30&sort=price  with the help of query operator 
+
+- now converting mongoose info into query object 
