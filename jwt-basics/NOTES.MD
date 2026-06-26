@@ -151,4 +151,10 @@ Return Unauthorized
 
  - now he explains the whole process 
 
- 
+ - understand Autherization: Bearer <token> you will get to see in netork when you get Data 
+
+ on front end you'll store this token somewhere and then when it comes to actual request i have a button i have the event listner the click event listner and then i'm issung a get req and it is going to dashboard and the way we add the headers again this is juts for axios library but the idea is going to be exactly the same for fetch or any other other axios library where you'll go with headers andthen of course the name is authorization then we go with bearer schema and then we add space and then we pass in token and i am getting this token from local storage 
+
+ - in insomnia as we send valid values we are getting proper token -> we're not looking for the body we're lokking for the headers 
+
+ - we are extarct req.headers.auth and validate and if it is valid only then we'll send back the data with the actual username the moment of course we just have john doe but eventually we'll set up where whatever username gets sent back to front-end well that one will send back here bcz that way we can showcase that we only access the specfic resorces that user has not just some random 
