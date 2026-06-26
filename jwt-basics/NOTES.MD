@@ -13,3 +13,5 @@
 - here we have 2 routes one fake one for login register and sign up also theres a diffrence between registering and just login 
 
 - also we need to pass data for login route bcz we are making a post request
+
+- now starting to setup jwt and auth
