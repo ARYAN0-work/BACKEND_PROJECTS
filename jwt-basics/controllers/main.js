@@ -1,12 +1,18 @@
 const express = require('express');
-
-// check username , password in post(login) request
-// if exist create new JWt
-// send back to frontend
-// setup auth so only the req wuth jwt access the dashboard
+const CustomAPIError = require('../errors/custom-error')
 
 const login = async(req,res)=>{    
     const {username,password} = req.body
+
+    
+    // WITH DB WE HAVE 3 OPTIONS 
+    // mongo required validation 
+    // entire additional layer of validation=> use  joi 
+    // check both the balues 
+    if (!username|| !password) {
+        throw new CustomAPIError('Plz provide email and password',400)
+    }
+
     console.log(username,password);
     res.send('Fake Login/Register/Signup Route')
 }
