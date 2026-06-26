@@ -158,3 +158,5 @@ Return Unauthorized
  - in insomnia as we send valid values we are getting proper token -> we're not looking for the body we're lokking for the headers 
 
  - we are extarct req.headers.auth and validate and if it is valid only then we'll send back the data with the actual username the moment of course we just have john doe but eventually we'll set up where whatever username gets sent back to front-end well that one will send back here bcz that way we can showcase that we only access the specfic resorces that user has not just some random 
+
+ - now go in insomnia and then we try to login in frontend send "username":"peter" , "password":"secret" and its good then of course i will get back my token theni can see my user has been created now i wanna go to my dashboard where we have authorization header then its good 

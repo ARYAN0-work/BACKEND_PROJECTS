@@ -19,9 +19,27 @@ const login = async(req,res)=>{
 }
 
 const dashboard = async (req,res) => {
-    console.log(req.headers);
-    const luckyNumber = Math.floor(Math.random()*100)
-    res.status(200).json({msg:`Hello, John Doe`,secret:`Here is your authorized data your lucky number is ${luckyNumber}`})
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader || !authHeader.startsWith('Beaer')) {
+        throw new CustomAPIError("No token provided",401);
+    }
+
+    const token = authHeader.split(' ')[1]
+    
+    //seeing that we got a valid token 
+    try {
+        const decoded = jwt.verify(token,process.env.JWT_SECRET)
+        console.log(decoded)
+        const luckyNumber = Math.floor(Math.random()*100)
+        res.status(200).json({msg:`Hello,${decoded.username}`,secret:`Here is your authorized data your lucky number is ${luckyNumber}`})
+        } catch (error){
+        throw new CustomAPIError("Not authorized to acess this route",401);
+    }
+   // now all this data is coming from payload when we signed the token 
+
+    console.log(token);// we got back the token from forntend 
+    
 }
 
 module.exports ={
