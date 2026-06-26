@@ -1,12 +1,12 @@
 const express = require('express');
-const CustomAPIError = require('../errors/custom-error')
+const {BadRequestError} = require('../errors')
 const jwt =require('jsonwebtoken')
 
 const login = async(req,res)=>{    
     const {username,password} = req.body
  
     if (!username|| !password) {
-        throw new CustomAPIError('Plz provide email and password',400)
+        throw new BadRequestError('Plz provide email and password',)
     }
 
     
