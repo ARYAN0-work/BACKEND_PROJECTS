@@ -22,8 +22,8 @@ app.get('/', (req, res) => {
 });
 
 //routes 
-app.use('api/v1/auth', authRouter);
-app.use('api/v1/jobs', jobsRouter);
+app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/jobs', jobsRouter);
 
 const port = process.env.PORT || 3000;
 

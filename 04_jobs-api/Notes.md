@@ -7,3 +7,5 @@
 - this time here we have and i am gonna check multiple mongoose error instead of sending back always 500 one 
 
 - now i can start setting up our auth model , the first thing i want to create a user model => more mongoose validators: on mongoose readme 
+
+- now starting with register controller[how we are gonna made it see in README.MD]
