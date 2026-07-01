@@ -17,3 +17,5 @@
 - now setting up token go on localhoset:3000/dashboard then on jobsApp netwok component you will see hooks
 
 - now setting up schema methods in mongoose 
+
+- now we are done with register controller ; in this  we learnd about haisng the password , setting up mongoose middleware as wellk as instance methods on schema and lets go with json web token
