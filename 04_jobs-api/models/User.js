@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const bcrypt =require('bcryptjs')
 
 const UserSchema = new mongoose.Schema({
   name: {
@@ -23,4 +24,21 @@ const UserSchema = new mongoose.Schema({
   },
 })
 
+UserSchema.pre('save',async function(){
+const salt = await bcrypt.genSalt(10);
+this.password = await bcrypt.hash(this.password,salt) 
+})// in mongooze upper vdersion next is not used 
+
 module.exports = mongoose.model('User', UserSchema)
+
+// hurbaar same email mat bhejna => 
+  /**
+   john@gmail.com
+   john1@gmail.com
+   john2@gmail.com
+   */
+
+/**
+genSalt(10) → generate a new salt.
+getSalt(10) → extract the salt from an existing hash.
+ */
