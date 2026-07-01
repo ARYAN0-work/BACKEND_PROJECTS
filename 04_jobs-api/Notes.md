@@ -9,3 +9,5 @@
 - now i can start setting up our auth model , the first thing i want to create a user model => more mongoose validators: on mongoose readme 
 
 - now starting with register controller[how we are gonna made it see in README.MD]
+
+- now we are gonna start tackling the password issue :in short never ever store yourr password as strings :we will hash them instead -> it cannot be changed one way and also if the input size changes a bit resulting hash will be diffrent so here are 2 things - store password in form that protect them even if the password itself is comprimsed and at the same time being able to verify the correct also for this use library bcryptjs => 17:30 to 19 => methods explained
