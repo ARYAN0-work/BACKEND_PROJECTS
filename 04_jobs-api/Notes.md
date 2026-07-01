@@ -13,3 +13,5 @@
 - now we are gonna start tackling the password issue :in short never ever store yourr password as strings :we will hash them instead -> it cannot be changed one way and also if the input size changes a bit resulting hash will be diffrent so here are 2 things - store password in form that protect them even if the password itself is comprimsed and at the same time being able to verify the correct also for this use library bcryptjs => 17:30 to 19 => methods explained
 
 - now refracting our code so the controller.js will not get blotted
+
+- now setting up token go on localhoset:3000/dashboard then on jobsApp netwok component you will see hooks
