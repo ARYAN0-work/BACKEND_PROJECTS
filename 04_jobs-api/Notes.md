@@ -15,3 +15,5 @@
 - now refracting our code so the controller.js will not get blotted
 
 - now setting up token go on localhoset:3000/dashboard then on jobsApp netwok component you will see hooks
+
+- now setting up schema methods in mongoose 
