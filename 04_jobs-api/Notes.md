@@ -21,3 +21,5 @@
 - now we are done with register controller ; in this  we learnd about haisng the password , setting up mongoose middleware as wellk as instance methods on schema and lets go with json web token :time units 
 
 - now starting with register cintroller
+
+- now only auth controller left so we can verify token
